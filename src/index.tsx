@@ -21,7 +21,7 @@ ReactDOM.render(
         <Route path='/profile'>
           <Profile></Profile>
         </Route>
-        <Route path='/car-listings'>
+        <Route path='/carlistings'>
           <CarListings></CarListings>
         </Route>
         <Route path='/favorites'>

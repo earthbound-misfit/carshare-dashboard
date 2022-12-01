@@ -34,11 +34,13 @@ const useStyles = makeStyles({
         top: 0,
         margin: 'auto',
         boxShadow: '12px 0 15px -4px rgba(31, 73, 125, 0.9)',
+        // backgroundColor: '#86B59A',
     },
     navbarItem: {
-        color: 'black',
+        color: 'white',
         textDecoration: 'none',
         fontSize: '1rem',
+        fontWeight: 'bold',
     },
     p5: {
         padding: '20px',
