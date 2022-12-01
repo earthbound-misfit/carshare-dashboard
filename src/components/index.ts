@@ -1,2 +1,7 @@
 export * from '../components/Home'
 export * from '../components/Navbar'
+export * from '../components/About'
+export * from '../components/Dashboard'
+export * from '../components/Profile'
+export * from '../components/CarListings'
+export * from '../components/Favorites'

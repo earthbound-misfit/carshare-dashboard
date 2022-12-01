@@ -9,7 +9,9 @@ const useStyles = makeStyles({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        fontSize: '1.5rem'
+        fontSize: '1.5rem',
+        color: 'white',
+        fontWeight: 'bolder',
     },
     center: {
         justifyContent: 'center',

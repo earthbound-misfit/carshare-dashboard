@@ -1,12 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css'
-import { Home } from './components';
+import { Home, About, CarListings, Dashboard, Favorites, Profile } from './components';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home title="Classic Car Sharing"/>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home title="Classic Car Sharing"/>
+        </Route>
+        <Route path='/about'>
+          <About></About>
+        </Route> 
+        <Route path='/dashboard'>
+          <Dashboard></Dashboard>
+        </Route>
+        <Route path='/profile'>
+          <Profile></Profile>
+        </Route>
+        <Route path='/car-listings'>
+          <CarListings></CarListings>
+        </Route>
+        <Route path='/favorites'>
+          <Favorites></Favorites>
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
