@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home title='CarShare'/>
+    <Home title="Classic Car Sharing"/>
   </React.StrictMode>,
   document.getElementById('root')
 );

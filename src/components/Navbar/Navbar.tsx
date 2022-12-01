@@ -9,6 +9,7 @@ const useStyles = makeStyles({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
+        fontSize: '1.5rem'
     },
     center: {
         justifyContent: 'center',
@@ -25,10 +26,17 @@ const useStyles = makeStyles({
     },
     navbar: {
         zIndex: 1,
+        position: 'fixed',
+        display: 'flex',
+        overflow: 'hidden',
+        top: 0,
+        margin: 'auto',
+        boxShadow: '12px 0 15px -4px rgba(31, 73, 125, 0.9)',
     },
     navbarItem: {
         color: 'black',
         textDecoration: 'none',
+        fontSize: '1rem',
     },
     p5: {
         padding: '20px',
