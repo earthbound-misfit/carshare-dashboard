@@ -129,7 +129,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     toolbar:{
       display: 'flex',
-      backgroundColor: '#86B59A',
+      backgroundColor: '#66B4A4',
       color: 'white',
       padding: '18px',
     },
