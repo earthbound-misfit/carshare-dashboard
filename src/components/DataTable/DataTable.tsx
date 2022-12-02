@@ -65,7 +65,6 @@ export const DataTable = () => {
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose} color="primary">Cancel</Button>
-                <Button onClick={handleClose} color="primary">Done</Button>
             </DialogActions>
         </Dialog>
             
