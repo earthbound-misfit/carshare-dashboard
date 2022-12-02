@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignItems: 'center',
     },
     background: {
-      backgroundImage: `url(${RoadTrip})`,
+      background: 'linear-gradient(153deg, rgba(255,255,255,1) 0%, rgba(102,180,163,1) 100%)',
       backgroundSize: 'cover',
       width: '100%',
       height: '100%',

@@ -9,6 +9,7 @@ import { Button, Dialog,
     DialogTitle } from '@material-ui/core';
 import { CarForm } from '../CarForm';
 
+
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90, hide: true },
     { field: 'make', headerName: 'Make', flex: 1 },
@@ -44,6 +45,8 @@ export const DataTable = () => {
         setTimeout( () => { window.location.reload(); }, 1000)
     }
         return (
+          <>
+      
         <div style={{ height: 400, width: '100%' }}>
             <h2>My Car Listings</h2>
 
@@ -54,7 +57,7 @@ export const DataTable = () => {
         />
 
         <Button onClick={handleOpen}>Update</Button>
-        <Button variant="contained" color="secondary" onClick={deleteData}>Delete</Button>
+        <Button variant="outlined" onClick={deleteData}>Delete</Button>
 
  
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
@@ -69,5 +72,7 @@ export const DataTable = () => {
         </Dialog>
             
         </div>
+        
+        </>
     )
 }
