@@ -1,10 +1,10 @@
 
 
-let token = 'Use your own token'
+let token = '91c96cac21bf16b8d04adb2eccf1a9d2014f304f2ef1e4b2';
 
 export const server_calls = {
     get: async () => {
-        const response = await fetch(`127.0.0.1:5000/api/carlistings`,{
+        const response = await fetch(`127.0.0.1:5000/api/cars`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ export const server_calls = {
     },
 
     create: async(data: any = {}) => {
-        const response = await fetch(`127.0.0.1:5000/api/carlistings`,{
+        const response = await fetch(`127.0.0.1:5000/api/cars`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export const server_calls = {
         return await response.json()
     },
     update: async (id:string, data:any = {}) => {
-        const response = await fetch(`127.0.0.1:5000/api/carlistings`, {
+        const response = await fetch(`127.0.0.1:5000/api/cars`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const server_calls = {
         });
     },
     delete: async(id:string) => {
-        const response = await fetch(`127.0.0.1:5000/api/carlistings${id}`,{
+        const response = await fetch(`127.0.0.1:5000/api/cars${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

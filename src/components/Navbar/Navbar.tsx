@@ -78,7 +78,7 @@ export const Navbar = () => {
             <div className={`${classes.width60} ${classes.alignCenter}`}>
                 <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
                     <li>
-                        <Button href='/CarListings' className={`${classes.navbarItem} ${classes.psides}`}>My Cars</Button>
+                        <Button href='/cars' className={`${classes.navbarItem} ${classes.psides}`}>My Cars</Button>
                     </li>
                     <li>
                         <Button href='Contact' className={`${classes.navbarItem} ${classes.psides}`}>Contact Us

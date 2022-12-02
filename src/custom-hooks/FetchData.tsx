@@ -3,7 +3,7 @@ import { server_calls } from '../api'
 
 export const useGetData = () => {
 		// Syntax: const [stateName, saveStateFunction] = importedHook<requiredDataType>(value passed in);
-    const [carData, setData] = useState<[]>([]);
+    const [carData, setData] = useState<[]>([ ]);
 
 		// This is a function that will get the data
     async function handleDataFetch(){

@@ -24,7 +24,7 @@ ReactDOM.render(
         <Route path='/profile'>
           <Profile></Profile>
         </Route>
-        <Route path='/carlistings'>
+        <Route path='/cars'>
           <CarListings></CarListings>
         </Route>
         <Route path='/favorites'>
@@ -34,7 +34,7 @@ ReactDOM.render(
     </Router>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root') as HTMLElement
 );
 
 

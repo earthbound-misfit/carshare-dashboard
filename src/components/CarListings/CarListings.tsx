@@ -30,13 +30,13 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import clsx from 'clsx';
 import { RouteComponentProps, withRouter } from "react-router-dom";
-// import { DataTable } from '../../components/DataTable';
-// import { ContactForm } from '../ContactForm'
+import { DataTable } from '../../components/DataTable';
+import { CarForm } from '../CarForm'
 
 interface CarListingsProps{
     history: RouteComponentProps["history"];
-    location: RouteComponentProps['location'];
-    match: RouteComponentProps['match'];
+    location: RouteComponentProps["location"];
+    match: RouteComponentProps["match"];
 }
 
 const drawerWidth = 240;
@@ -103,6 +103,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     drawerPaper: {
       width: drawerWidth,
+      backgroundColor: 'white',
     },
     drawerHeader: {
       display: 'flex',
@@ -152,7 +153,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 
 export const CarListings = withRouter((props:CarListingsProps) => {
-    console.log(props);
     const { history } = props;
     const classes = useStyles();
     const theme = useTheme();
@@ -196,6 +196,7 @@ export const CarListings = withRouter((props:CarListingsProps) => {
     ]
    return (
     <div className={`${classes.background}`}>
+  
         <div className={`${classes.root} ${classes.column}`}>
             <CssBaseline /> 
             <AppBar position="fixed" className={clsx(classes.appBar, {[classes.appBarShift]: open })}> 
@@ -209,10 +210,10 @@ export const CarListings = withRouter((props:CarListingsProps) => {
                     <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Create New Listing</Button>
 
                     <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby="form-dialog-title">
-                        <DialogTitle id="form-dialog-title">Add New Contact</DialogTitle>
+                        <DialogTitle id="form-dialog-title">Add New Listing</DialogTitle>
                         <DialogContent>
                             <DialogContentText></DialogContentText>
-                            {/* <ContactForm /> */}
+                            <CarForm />
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={handleDialogClickClose} color="primary">Cancel</Button>
@@ -242,7 +243,7 @@ export const CarListings = withRouter((props:CarListingsProps) => {
             </MUIDrawer>
             <main className={`${clsx(classes.content, {[classes.contentShift]: open,})} ${classes.leftMargin}`}>
                 <div className={classes.drawerHeader} />
-                    {/* <DataTable /> */} 
+                    <DataTable /> 
             </main>
         </div>
         </div>
