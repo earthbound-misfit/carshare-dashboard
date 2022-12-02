@@ -81,11 +81,11 @@ export const Navbar = () => {
                         <Button href='/cars' className={`${classes.navbarItem} ${classes.psides}`}>My Cars</Button>
                     </li>
                     <li>
-                        <Button href='Contact' className={`${classes.navbarItem} ${classes.psides}`}>Contact Us
+                        <Button href='/favorites' className={`${classes.navbarItem} ${classes.psides}`}>Favorited Cars
                         </Button>
                     </li>
                     <li>
-                        <Button href='About' className={`${classes.navbarItem} ${classes.psides}`}>About Us</Button>
+                        <Button href='/about' className={`${classes.navbarItem} ${classes.psides}`}>About Us</Button>
                     </li>
                 </ul>
             </div>

@@ -190,8 +190,8 @@ export const CarListings = withRouter((props:CarListingsProps) => {
             onClick: () => history.push('/about')
         },
         {
-            text: 'Contact',
-            onClick: () => history.push('/contact')
+            text: 'Favorites',
+            onClick: () => history.push('/favorites')
         },
     ]
    return (
