@@ -47,7 +47,7 @@ export const DataTable = () => {
         return (
           <>
       
-        <div style={{ height: 400, width: '100%' }}>
+        <div style={{ height: 400, width: '75%' }}>
             <h2>My Car Listings</h2>
 
         <DataGrid rows={ carData } columns={ columns } pageSize={ 5 } checkboxSelection={true} 
