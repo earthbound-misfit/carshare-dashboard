@@ -48,7 +48,7 @@ export const Home = ( props:Props ) => {
             <div className={`${classes.background}`}>
             <div className={classes.main_text}>
                 <h1>{ props.title }</h1>
-                <Button href="/cars" className={classes.button_text}>Hit the Road!</Button> 
+                <Button href="/signin" className={classes.button_text}>Sign In to View Your Cars!</Button> 
             </div>
             </div>
     </>

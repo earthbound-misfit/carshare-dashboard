@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-// import { Link } from 'react-router-dom';
+import { AuthCheck } from 'reactfire';
 
 const useStyles = makeStyles({
     navlogo: {
@@ -77,16 +77,21 @@ export const Navbar = () => {
             </div>
             <div className={`${classes.width60} ${classes.alignCenter}`}>
                 <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
+                   <Suspense fallback={'loading...'}>
+                    <AuthCheck fallback={
+                      <li>
+                        <Button href='/signin' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Button>
+                    </li>
+                    }>
                     <li>
                         <Button href='/cars' className={`${classes.navbarItem} ${classes.psides}`}>My Cars</Button>
                     </li>
+                    </AuthCheck>
                     <li>
                         <Button href='/about' className={`${classes.navbarItem} ${classes.psides}`}>About
                         </Button>
                     </li>
-                    <li>
-                        <Button href='/signin' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Button>
-                    </li>
+                    </Suspense>
                 </ul>
             </div>
         </div>
