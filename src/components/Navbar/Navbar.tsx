@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { AuthCheck } from 'reactfire';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     navlogo: {
@@ -72,15 +73,22 @@ export const Navbar = () => {
     return (
         <>
           <div className={`${classes.row} ${classes.navbar} ${classes.width100} ${classes.alignCenter} ${classes.p5} ${classes.spaceBetween}`}>
+            <Button href='/'>
             <div className={`${classes.navlogo} `}>
                     <h1>Yewy</h1>
-            </div>
+            </div></Button>
             <div className={`${classes.width60} ${classes.alignCenter}`}>
                 <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
                    <Suspense fallback={'loading...'}>
                     <AuthCheck fallback={
                       <li>
-                        <Button href='/signin' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Button>
+
+
+                        <Button> 
+                          <Link to='/signin' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Link>
+                        </Button>
+
+
                     </li>
                     }>
                     <li>

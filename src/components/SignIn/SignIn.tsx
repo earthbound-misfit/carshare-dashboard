@@ -7,6 +7,7 @@ import { Container, Button, makeStyles, Typography, Snackbar } from '@material-u
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 import { Navbar } from '../../components'
+import RoadTrip from '../../assets/images/road-trip.jpg'
 
 const Alert = (props:AlertProps) => {
   return <MuiAlert elevation={6} variant="filled" {...props} />
@@ -19,9 +20,10 @@ const useStyles = makeStyles({
     padding: '0',
     color: 'white',
     height: '50px',
-    width: '240px',
+    width: '100%',
     border: 'none',
     textAlign: 'center',
+    justifyContent: 'center',
     boxShadow: 'rgb(0 0 0 / 25%) 0px 2px 4px 0px',
     fontSize: '16px',
     lineHeight: '48px',
@@ -41,12 +43,26 @@ const useStyles = makeStyles({
     fontSize: '2em'
   },
   containerStyle: {
-    marginTop: '2em'
+    backgroundColor: 'white',
+    zIndex: 2,
+    borderRadius: '10px',
+    padding: '20px',
+    marginTop: '12em',
+    boxShadow: 'rgb(255 255 255 / 25%) 0px 2px 4px 0px',
   },
   snackBar: {
     color: 'white',
     backgroundColor: '#4caf50'
-  }
+  },
+  background: {
+    backgroundImage: `url(${RoadTrip})`,
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '100%',
+    backgroundPosition: 'center',
+    position: 'absolute',
+    zIndex: -1,
+    },
 });
 
 interface SignInProps {
@@ -82,12 +98,15 @@ export const SignIn = withRouter( (props:SignInProps) => {
 
   const sign_out = async () => {
     await auth.signOut();
-  };
+  }
+  
 
   return (
-    <div>
+    <>
       <Navbar />
+          <div className={`${classes.background}`}>
       <Container maxWidth = 'sm' className={classes.containerStyle}>
+        
         <Typography className={classes.typographyStyle}>Sign In Below</Typography>
         <form>
           <div>
@@ -102,17 +121,20 @@ export const SignIn = withRouter( (props:SignInProps) => {
         </form>
 
         <AuthCheck fallback={
-          <Button className={classes.googleButton} onClick={sign_in}>Sign In</Button>
+          <Button className={classes.googleButton} onClick={sign_in}>Sign In With Google</Button>
         }>
           <Button variant="contained" color="secondary" onClick={sign_out}>Sign Out</Button>
-
         </AuthCheck>
+        
         <Snackbar message={'Success'} open={open} autoHideDuration={6000} onClose={handleSnackClose}>
           <Alert onClose={handleSnackClose} severity="success">Successful Sign In - Redirect in 6 seconds</Alert>
         </Snackbar>
 
       </Container>
-    </div>
+      
+      </div>
+      
+    </>
   )
 });
 
