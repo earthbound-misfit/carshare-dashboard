@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css'
-import { Home, About, CarListings, Dashboard, Profile, SignIn } from './components';
+import { Home, CarListings, SignIn } from './components';
 import reportWebVitals from './reportWebVitals';
 import { FirebaseAppProvider, AuthCheck } from 'reactfire';
 import { firebaseConfig } from './firebaseConfig';
@@ -18,15 +18,6 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/">
           <Home title="Classic Car Sharing"/>
-        </Route>
-        <Route path='/about'>
-          <About></About>
-        </Route> 
-        <Route path='/dashboard'>
-          <Dashboard></Dashboard>
-        </Route>
-        <Route path='/profile'>
-          <Profile></Profile>
         </Route>
         <Route path='/cars'>
           <CarListings></CarListings>

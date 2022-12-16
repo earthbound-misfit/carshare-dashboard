@@ -2,7 +2,6 @@ import React, {useState}  from 'react'
 // import { useGetData } from '../../custom-hooks'
 // import { Link } from 'react-router-dom';
 // import {Paper} from '@material-ui/core';
-import RoadTrip from '../../assets/images/road-trip.jpg'
 import { Drawer as MUIDrawer, 
     ListItem, 
     List, 
@@ -182,16 +181,12 @@ export const CarListings = withRouter((props:CarListingsProps) => {
             onClick: () => history.push('/')
         },
         {
-            text: 'Sign In',
-            onClick: () => history.push('/signin')
-        },
-        {
             text: 'About',
             onClick: () => history.push('/about')
         },
-        {
-            text: 'Favorites',
-            onClick: () => history.push('/favorites')
+             {
+            text: 'Sign Out',
+            onClick: () => history.push('/')
         },
     ]
    return (
