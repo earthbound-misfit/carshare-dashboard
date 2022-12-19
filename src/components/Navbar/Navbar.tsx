@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     navbarItem: {
         color: 'white',
         textDecoration: 'none',
-        fontSize: '1rem',
+        fontSize: '1.5rem',
         fontWeight: 'bold',
     },
     p5: {
@@ -56,14 +56,10 @@ const useStyles = makeStyles({
         listStyleType: 'none',
     },
     width60: {
-        width: '60%',
+        width: '20%',
     },
     width100: {
         width: '100%',
-    },
-    psides: {
-        paddingRight: '10px',
-        paddingLeft: '10px',
     },
 })
 
@@ -78,27 +74,23 @@ export const Navbar = () => {
                     <h1>Yewy</h1>
             </div></Button>
             <div className={`${classes.width60} ${classes.alignCenter}`}>
-                <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
+                <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween}`}>
                    <Suspense fallback={'loading...'}>
                     <AuthCheck fallback={
                       <li>
 
 
                         <Button> 
-                          <Link to='/signin' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Link>
+                          <Link to='/signin' className={`${classes.navbarItem}`}>Sign In</Link>
                         </Button>
 
 
                     </li>
                     }>
                     <li>
-                        <Button href='/cars' className={`${classes.navbarItem} ${classes.psides}`}>My Cars</Button>
+                        <Button href='/cars' className={`${classes.navbarItem}`}>My Cars</Button>
                     </li>
                     </AuthCheck>
-                    <li>
-                        <Button href='/about' className={`${classes.navbarItem} ${classes.psides}`}>About
-                        </Button>
-                    </li>
                     </Suspense>
                 </ul>
             </div>

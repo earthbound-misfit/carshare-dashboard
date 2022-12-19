@@ -180,10 +180,6 @@ export const CarListings = withRouter((props:CarListingsProps) => {
             text: 'Home',
             onClick: () => history.push('/')
         },
-        {
-            text: 'About',
-            onClick: () => history.push('/about')
-        },
              {
             text: 'Sign Out',
             onClick: () => history.push('/')

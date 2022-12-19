@@ -11,7 +11,9 @@ interface Props {
 const useStyles = makeStyles(
   {
       background: {
+      background: "rgba(0, 0, 0, .30)",
       backgroundImage: `url(${RoadTrip})`,
+      backgroundBlendMode: 'darken',
       backgroundSize: 'cover',
       width: '100%',
       height: '100%',
@@ -31,8 +33,8 @@ const useStyles = makeStyles(
       color: 'black',
       textDecoration: 'none',
       backgroundColor: 'rgba(255,255,255,0.8)',
-      borderRadius: '30px',
-      padding: '15px',
+      borderRadius: '20px',
+      padding: '25px',
       marginTop: '12px',
       boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.4)',
     }
@@ -46,7 +48,7 @@ export const Home = ( props:Props ) => {
       <Navbar />
             <div className={`${classes.background}`}>
             <div className={classes.main_text}>
-                <h1>{ props.title }</h1>
+                <Button href="/signin" className={classes.button_text}><h1>{ props.title }</h1></Button>
             </div>
             </div>
     </>
