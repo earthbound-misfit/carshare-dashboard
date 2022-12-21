@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { AuthCheck } from 'reactfire';
 import { Link } from 'react-router-dom';
+import firebase from 'firebase';
 
 const useStyles = makeStyles({
     navlogo: {
@@ -61,6 +62,9 @@ const useStyles = makeStyles({
     width100: {
         width: '100%',
     },
+    psides: {
+      paddingRight: '20px',
+    }
 })
 
 export const Navbar = () => {
@@ -90,6 +94,7 @@ export const Navbar = () => {
                     <li>
                         <Button href='/cars' className={`${classes.navbarItem}`}>My Cars</Button>
                     </li>
+                    <Button className={`${classes.navbarItem} ${classes.psides}`} onClick={() => firebase.auth().signOut()}>Sign Out</Button>
                     </AuthCheck>
                     </Suspense>
                 </ul>

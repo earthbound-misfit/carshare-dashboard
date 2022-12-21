@@ -5,13 +5,21 @@ import initializeApp from "firebase";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 export const firebaseConfig = {
+
   apiKey: "AIzaSyDtg1GvJQkKzKEOiidNenFsGJU1dhSCwrE",
+
   authDomain: "classic-carshare-react.firebaseapp.com",
+
   projectId: "classic-carshare-react",
+
   storageBucket: "classic-carshare-react.appspot.com",
+
   messagingSenderId: "284883630179",
-  appId: "1:284883630179:web:3bff9708beb1ffc276e056"
+
+  appId: "1:284883630179:web:df730857bf05901576e056"
+
 };
 
 // firebase.initializeApp(firebaseConfig);

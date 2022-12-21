@@ -48,7 +48,7 @@ export const Home = ( props:Props ) => {
       <Navbar />
             <div className={`${classes.background}`}>
             <div className={classes.main_text}>
-                <Button href="/signin" className={classes.button_text}><h1>{ props.title }</h1></Button>
+                <Button href="/cars" className={classes.button_text}><h1>{ props.title }</h1></Button>
             </div>
             </div>
     </>
